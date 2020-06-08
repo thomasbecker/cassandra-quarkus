@@ -32,12 +32,12 @@ It requires Java 8 or higher.
 
 ## Useful links
 
-* [docs]
+* [quickstart guide]
 * Bug tracking: [Issues]
 * [Mailing list]
 * [Changelog]
 
-[API docs]: todo_link_to_live_adoc 
+[quickstart guide]: todo_link_to_live_adoc_from_docs_module 
 [Issues]: https://github.com/datastax/cassandra-quarkus/issues
 [Mailing list]: https://groups.google.com/a/lists.datastax.com/forum/#!forum/cassandra-quarkus
 [Changelog]: changelog/

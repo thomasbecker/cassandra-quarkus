@@ -2,13 +2,12 @@
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.datastax.oss.quarkus/cassandra-quarkus-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.datastax.oss.quarkus/cassandra-quarkus-client/)
 
-*You can find the
-documentation for latest version through [DataStax Docs] or via the release tags, e.g. 
+*You can find the documentation for latest version through [Docs] or via the release tags, e.g. 
 [1.0.0-alpha1](https://github.com/datastax/cassandra-quarkus/tree/1.0.0-alpha1).*
 
 An Apache Cassandra(R) extension for Quarkus.
 
-[DataStax Docs]: todo_link_to_datastax_docs
+[Docs]: https://github.com/datastax/cassandra-quarkus/blob/master/documentation/src/main/asciidoc/cassandraclient.adoc
 
 ## Getting the extension
 
@@ -37,7 +36,7 @@ It requires Java 8 or higher.
 * [Mailing list]
 * [Changelog]
 
-[quickstart guide]: todo_link_to_live_adoc_from_docs_module 
+[quickstart guide]: https://github.com/datastax/cassandra-quarkus/blob/master/documentation/src/main/asciidoc/cassandraclient.adoc 
 [Issues]: https://github.com/datastax/cassandra-quarkus/issues
 [Mailing list]: https://groups.google.com/forum/#!forum/quarkus-dev
 [Changelog]: changelog/

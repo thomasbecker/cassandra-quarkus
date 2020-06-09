@@ -29,14 +29,14 @@ The elements are stored in the Cassandra database.
 We recommend that you follow the instructions in the next sections and create the application step by step.
 However, you can go right to the completed example.
 
-The solution is located in the `quickstart` {quickstart-clone-url}[directory].
+The solution is located in the `quickstart` link:https://github.com/datastax/cassandra-quarkus/tree/master/quickstart[directory].
 
 == Creating the Maven project
 
 First, we need a new project. Create a new maven project and copy the `pom.xml` file that is present in the `quickstart` directory.
 
 The `pom.xml` is importing the RESTEasy/JAX-RS, JSON-B, Context Propagation and Cassandra Client extensions.
-We will be building a REST application using the {mapper-docs-url}[DataStax Object Mapper].
+We will be building a REST application using the link:https://docs.datastax.com/en/developer/java-driver/latest/manual/mapper[DataStax Object Mapper].
 It will simplify the Data Access Layer code.
 
 The most important part of the `pom.xml` is adding the `cassandra-quarkus` extension:
@@ -255,7 +255,7 @@ They need to be located in the resources directory of your application.
 They will be passed automatically to the underlying driver configuration mechanism.
 Settings defined in `application.properties` with the `quarkus.cassandra` prefix will have priority over settings defined in `application.conf` or `application.json`.
 
-To see the full list of settings, please refer to the {reference-conf-url}[reference.conf].
+To see the full list of settings, please refer to the link:https://docs.datastax.com/en/developer/java-driver/latest/manual/core/configuration/reference/[reference.conf].
 
 == Running a Cassandra Database
 By default, `CassandraClient` is configured to access a local Cassandra database on port 9042 (the default Cassandra port).
@@ -297,7 +297,7 @@ cqlsh -e "CREATE TABLE IF NOT EXISTS k1.fruit(id text, name text, description te
 
 Now let's add a simple web page to interact with our `FruitResource`.
 Quarkus automatically serves static resources located under the `META-INF/resources` directory.
-In the `src/main/resources/META-INF/resources` directory, add a `fruits.html` file with the content from this {fruits-html-url}[fruits.html] file in it.
+In the `src/main/resources/META-INF/resources` directory, add a `fruits.html` file with the content from this link:https://github.com/datastax/cassandra-quarkus/tree/master/quickstart/src/main/resources/META-INF/resources/fruits.html[fruits.html] file in it.
 
 You can now interact with your REST service:
 
@@ -315,7 +315,7 @@ You can rewrite the previous example to use it like the following.
 ====
 The underlying datastax-java-driver `CqlSession` uses the `Publisher` API for reactive calls. The Quarkus framework uses Mutiny API.
 Because of that, the `CqlQuarkusSession` converts `Publisher` API to `Mutiny` reactive types.
-If you're not familiar with them, read the https://quarkus.io/guides/getting-started-reactive#mutiny[Getting Started with Reactive guide] first.
+If you're not familiar with them, read the link:https://quarkus.io/guides/getting-started-reactive#mutiny[Getting Started with Reactive guide] first.
 ====
 
 Firstly, we need to implement the `@Dao` that works in a reactive way:
@@ -418,7 +418,7 @@ Please note that all methods exposed via REST interface are returning reactive t
 == Creating a reactive frontend
 
 Now let's add a simple web page to interact with our `FruitReactiveResource`.
-In the `src/main/resources/META-INF/resources` directory, add a `reactive-fruits.html` file with the content from this {reactive-fruits-html-url}[reactive-fruits.html] file in it.
+In the `src/main/resources/META-INF/resources` directory, add a `reactive-fruits.html` file with the content from this link:https://github.com/datastax/cassandra-quarkus/tree/master/quickstart/src/main/resources/META-INF/resources/reactive-fruits.html[reactive-fruits.html] file in it.
 
 You can now interact with your reactive REST service:
 
@@ -452,7 +452,7 @@ quarkus.cassandra.metrics.session-enabled=connected-nodes,bytes-sent
 quarkus.cassandra.metrics.node-enabled=pool.open-connections
 ----
 
-For the full list of available metrics, please refer to the {reference-conf-url}[reference.conf] and the `advanced.metrics` section.
+For the full list of available metrics, please refer to the link:https://docs.datastax.com/en/developer/java-driver/latest/manual/core/configuration/reference/[reference.conf] and the `advanced.metrics` section.
 
 When metrics are properly enabled and when you access the `/metrics` endpoint of your application, you will see metric reports for all enabled metrics.
 

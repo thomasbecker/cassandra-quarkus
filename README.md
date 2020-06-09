@@ -39,7 +39,7 @@ It requires Java 8 or higher.
 
 [quickstart guide]: todo_link_to_live_adoc_from_docs_module 
 [Issues]: https://github.com/datastax/cassandra-quarkus/issues
-[Mailing list]: https://groups.google.com/a/lists.datastax.com/forum/#!forum/cassandra-quarkus
+[Mailing list]: https://groups.google.com/forum/#!forum/quarkus-dev
 [Changelog]: changelog/
 
 ## License

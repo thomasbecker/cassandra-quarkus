@@ -36,8 +36,7 @@ The solution is located in the `quickstart` link:https://github.com/datastax/cas
 First, we need a new project. Create a new maven project and copy the `pom.xml` file that is present in the `quickstart` directory.
 
 The `pom.xml` is importing the RESTEasy/JAX-RS, JSON-B, Context Propagation and Cassandra Client extensions.
-We will be building a REST application using the link:https://docs.datastax.com/en/developer/java-driver/latest/manual/mapper[DataStax Object Mapper].
-It will simplify the Data Access Layer code.
+We will be building a REST application using the link:https://docs.datastax.com/en/developer/java-driver/latest/manual/mapper[DataStax Object Mapper] to simplify the Data Access Layer code.
 
 The most important part of the `pom.xml` is adding the `cassandra-quarkus` extension:
 [source,xml]

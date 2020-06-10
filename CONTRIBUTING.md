@@ -61,7 +61,7 @@ commit:
 mvn xml-format:xml-format
 ```
 
-The formatter does not enforce a maximum line length, but please try to keep it below 100 characters
+The formatter does not enforce a maximum line length, but please use less than 100 characters
 to keep files readable across all mediums (IDE, terminal, Github...).
 
 ## Coding style -- production code

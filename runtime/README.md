@@ -4,7 +4,7 @@ The Runtime module for an Apache Cassandra(R) extension for Quarkus.
 
 # The Purpose of Runtime
 
-This module contains classes that are used during the runtime of this extension.
+This module contains classes used during the runtime of this extension.
 The clients of the cassandra-extension should import this dependency in their applications.
 
 ## The QuarkusCqlSession

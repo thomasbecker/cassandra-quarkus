@@ -70,7 +70,7 @@ Do not use static imports. They make things harder to understand when you look a
 someplace where you don't have IDE support, like Github's code view.
 
 Avoid abbreviations in class and variable names. A good rule of thumb is that you should only use
-them if you would also do so verbally, for example "id" and "config" are probably reasonable.
+them if you would also do so verbally. For example, "id" and "config" are probably reasonable.
 Single-letter variables are permissible if the variable scope is only a few lines, or for commonly
 understood cases (like `i` for a loop index).
 

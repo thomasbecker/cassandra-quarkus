@@ -88,6 +88,9 @@ We use SLF4J; loggers are declared like this:
 private static final Logger LOG = LoggerFactory.getLogger(TheEnclosingClass.class);
 ```
 
+For more information, please visit the [quarkus logging](https://quarkus.io/guides/logging) website.
+
+
 
 ### Nullability annotations
 
@@ -149,26 +152,23 @@ When native integration tests are activated, the build takes considerably longer
    
     mvn clean package -Prelease    
     
+    
 
-## Build
+## Continuous Integration (CI)
 
-* Clone the repository: `git clone git@github.com:datastax/cassandra-quarkus.git`
-* Navigate to the directory: `cd cassandra-quarkus`
-* Invoke `mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V` from the root directory
+All branches and pull-requests in this project are built regularly on DataStax internal continuous integration servers. 
+These builds are not publicly available at this moment.
 
-```bash
-git clone git@github.com:datastax/cassandra-quarkus.git
-cd cassandra-quarksu
-mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-```
+The `master` branch of this project is also regularly built against Quarkus `master` branch, by Quarkus own CI system. 
+The builds can be consulted [here](https://github.com/datastax/cassandra-quarkus/actions?query=workflow%3A%22Quarkus+ecosystem+CI%22).
 
-This build skips all the tests, native-image builds and documentation generation. 
+## Deployment & Release
 
-Removing the `-DskipTests -DskipITs` flags enables the tests. 
-It will take much longer to build but will give you more guarantees on your code. 
+DataStax does not publish snapshot builds of this project at the moment.
 
-You can build and test native images in the integration tests supporting it by using `mvn install -Dnative`.
-
+Releases are managed and conducted by DataStax. S
+table (release) artifacts are available [from Maven Central](https://repo1.maven.org/maven2/com/datastax/oss/quarkus/cassandra-quarkus-parent). 
+See "Getting the extension" in the project's main [README file](https://github.com/datastax/cassandra-quarkus/#getting-the-extension) for more details.
 
 ## License headers
 

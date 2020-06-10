@@ -115,7 +115,7 @@ Static imports are permitted in a couple of places:
   verify(codec).decodePrimitive(any(ByteBuffer.class), eq(ProtocolVersion.DEFAULT));
   ```
 
-Test methods names use lower snake case, generally start with `should`, and clearly indicate the
+Test methods names use lower snake_case, generally start with `should`, and clearly indicate the
 purpose of the test, for example: `should_fail_if_key_already_exists`. If you have trouble coming 
 up with a simple name, it might be a sign that your test does too much, and should be split.
 

@@ -33,7 +33,7 @@ If you have not done so on this machine, you need to:
 * Set `GRAALVM_HOME` to your GraalVM Home directory e.g. `/opt/graalvm` on Linux or `$location/JDK/GraalVM/Contents/Home` on macOS
 * Install Docker: it is used to run the integration tests for this project:
     * Check [the installation guide](https://docs.docker.com/install/), and [the MacOS installation guide](https://docs.docker.com/docker-for-mac/install/)
-    * If you just install docker, be sure that your current user can run a container (no root required). 
+    * If you just installed docker, be sure that your current user can run a container (no root required). 
       On Linux, check [the post-installation guide](https://docs.docker.com/install/linux/linux-postinstall/)
 
 ## Coding Guidelines

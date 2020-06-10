@@ -232,6 +232,8 @@ Like commits, pull requests should be focused on a single, clearly stated goal.
 Don't base a pull request onto another one, it's too complicated to follow two branches that evolve
 at the same time. If a ticket depends on another, wait for the first one to be merged. 
 
+If your pull request references an issue, make sure to reference it in its title or in its description.
+
 If you have to address feedback, avoid rewriting the history (e.g. squashing or amending commits):
 this makes the reviewers' job harder, because they have to re-read the full diff and figure out
 where your new changes are. Instead, push a new commit on top of the existing history; it will be

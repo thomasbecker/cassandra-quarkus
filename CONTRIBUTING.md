@@ -21,7 +21,7 @@ If you have not done so on this machine, you need to:
 * Install [GraalVM](https://quarkus.io/guides/building-native-image)
 * Install platform C developer tools:
     * Linux
-        * Make sure headers are available on your system (you'll hit 'Basic header file missing (<zlib.h>)' error if they aren't).
+        * Make sure header files are installed on your system.
             * On Fedora `sudo dnf install zlib-devel`
             * Otherwise `sudo apt-get install libz-dev`
     * macOS

@@ -14,7 +14,7 @@ Don't forget to indicate your Quarkus, Java, Maven/Gradle and GraalVM version.
 
 ### Code reviews
 
-All submissions, including submissions by project members, need to be reviewed before being merged.
+All submissions, including submissions by project members, must be reviewed before being merged.
 
 ## Setup
 

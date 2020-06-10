@@ -256,7 +256,5 @@ If you need new stuff from the base branch, it's fine to rebase and force-push, 
 rewrite the history. Just give a heads up to the reviewers beforehand. Don't push a merge commit to
 a pull request.
 
-Be sure to test your pull request in:
-
-1. Java mode
-2. Native mode
+Be sure to test your pull request by running all the unit and integration tests, including tests in native mode. 
+Again, this can be done by running `mvn clean verify -Pnative`.

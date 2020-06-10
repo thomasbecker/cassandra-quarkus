@@ -161,7 +161,7 @@ cd cassandra-quarksu
 mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 ```
 
-This build skipped all the tests, native-image builds and documentation generation. 
+This build skips all the tests, native-image builds and documentation generation. 
 
 Removing the `-DskipTests -DskipITs` flags enables the tests. 
 It will take much longer to build but will give you more guarantees on your code. 

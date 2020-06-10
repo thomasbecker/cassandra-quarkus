@@ -76,7 +76,7 @@ be around 200-300 lines.
 
 ### Javadoc
 
-All types in "API" packages must be documented. For "internal" packages, documentation is optional,
+All types in **API** packages must be documented. For **internal** packages, documentation is optional,
 but not discouraged: it's generally a good idea to have a class-level comment that explains
 where the component fits in the architecture, and anything else that you feel is important.
 

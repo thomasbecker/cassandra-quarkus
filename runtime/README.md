@@ -17,4 +17,4 @@ refer to the [Java driver documentation](https://docs.datastax.com/en/developer/
 
 ## Runtime Configuration
 
-The `CassandraClientConnectionConfig` provides the runtime settings for configuration of the `QuarkusCqlSession`.
+The `CassandraClientConnectionConfig` class provides the runtime settings for configuration of the `QuarkusCqlSession` bean.

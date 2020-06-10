@@ -12,10 +12,6 @@ This project uses GitHub issues to manage the issues. Open an issue directly in 
 If you believe you have found a possible bug, please indicate a way to reproduce it, what you are seeing, and what you would expect to see.
 Don't forget to indicate your Quarkus, Java, Maven/Gradle and GraalVM versions.
 
-### Code reviews
-
-All submissions, including submissions by project members, must be reviewed before being merged.
-
 ## Setup
 
 If you have not done so on this machine, you need to:
@@ -32,7 +28,8 @@ If you have not done so on this machine, you need to:
         * `xcode-select --install` 
 * Set `GRAALVM_HOME` to your GraalVM Home directory e.g. `/opt/graalvm` on Linux or `$location/JDK/GraalVM/Contents/Home` on macOS
 * Install Docker: it is used to run the integration tests for this project:
-    * Check [the installation guide](https://docs.docker.com/install/), and [the MacOS installation guide](https://docs.docker.com/docker-for-mac/install/)
+    * Check [the installation guide](https://docs.docker.com/install/), 
+      and [the MacOS installation guide](https://docs.docker.com/docker-for-mac/install/)
     * If you just installed docker, be sure that your current user can run a container (no root required). 
       On Linux, check [the post-installation guide](https://docs.docker.com/install/linux/linux-postinstall/)
 
@@ -230,6 +227,8 @@ After your change, what will change.
 ```
 
 ## Pull requests
+
+All submissions, including submissions by project members, must be reviewed before being merged.
 
 Like commits, pull requests should be focused on a single, clearly stated goal.
 

@@ -138,11 +138,15 @@ different families of tests into separate child classes.
    
 ### Integration tests
 
+Run the following command to execute both unit tests and regular integration tests:
+
     mvn clean verify
 
-### Integration tests native
+To also run integration tests that require a native image to be built, you need to activate the `native` profile:
 
     mvn clean verify -Pnative
+    
+When native integration tests are activated, the build takes considerably longer to finish.    
     
 ### Generating documentation
    

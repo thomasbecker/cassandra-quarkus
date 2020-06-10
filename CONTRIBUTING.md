@@ -9,7 +9,7 @@ But first, read this page.
 
 This project uses GitHub issues to manage the issues. Open an issue directly in GitHub.
 
-If you believe you found a bug, and it's likely possible, please indicate a way to reproduce it, what you are seeing and what you would expect to see.
+If you believe you have found a possible bug, please indicate a way to reproduce it, what you are seeing, and what you would expect to see.
 Don't forget to indicate your Quarkus, Java, Maven/Gradle and GraalVM versions.
 
 ### Code reviews

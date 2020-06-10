@@ -33,7 +33,7 @@ The solution is located in the `quickstart` link:https://github.com/datastax/cas
 
 == Creating the Maven project
 
-First, we need a new project. Create a new maven project and copy the `pom.xml` file that is present in the `quickstart` directory.
+First, create a new maven project and copy the `pom.xml` file that is present in the `quickstart` directory.
 
 The `pom.xml` is importing the RESTEasy/JAX-RS, JSON-B, Context Propagation and Cassandra Client extensions.
 We will be building a REST application using the link:https://docs.datastax.com/en/developer/java-driver/latest/manual/mapper[DataStax Object Mapper] to simplify the Data Access Layer code.

@@ -142,7 +142,7 @@ different families of tests into separate child classes.
 
 ### Integration tests native
 
-    mvn clean verify -Dnative
+    mvn clean verify -Pnative
     
 ### Generating documentation
    

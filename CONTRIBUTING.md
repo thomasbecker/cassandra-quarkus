@@ -67,7 +67,7 @@ to keep files readable across all mediums (IDE, terminal, Github...).
 ## Coding style -- production code
 
 Do not use static imports. They make things harder to understand when you look at the code 
-someplace where you don't have IDE support, like Github's code view.
+without IDE support, like Github's code view.
 
 Avoid abbreviations in class and variable names. A good rule of thumb is that you should only use
 them if you would also do so verbally. For example, "id" and "config" are probably reasonable.

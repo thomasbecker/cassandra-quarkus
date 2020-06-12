@@ -9,36 +9,40 @@ But first, read this page.
 
 This project uses GitHub issues to manage the issues. Open an issue directly in GitHub.
 
-If you believe you have found a possible bug, please indicate a way to reproduce it, what you are seeing, and what you would expect to see.
-Don't forget to indicate your Quarkus, Java, Maven/Gradle and GraalVM versions.
+If you believe you have found a possible bug, please indicate a way to reproduce it, what you are 
+seeing, and what you would expect to see. Don't forget to indicate your Quarkus, Java, Maven/Gradle 
+and GraalVM versions.
 
 ## Setup
 
 If you have not done so on this machine, you need to:
  
-* Install Git and configure your GitHub access
-* Install Java SDK (OpenJDK recommended)
-* Install [GraalVM](https://quarkus.io/guides/building-native-image)
+* Install Git and configure your GitHub access;
+* Install Java SDK (OpenJDK recommended);
+* Install [GraalVM](https://quarkus.io/guides/building-native-image);
 * Install platform C developer tools:
-    * Linux
+    * Linux:
         * Make sure header files are installed on your system.
-            * On Fedora `sudo dnf install zlib-devel`
-            * Otherwise `sudo apt-get install libz-dev`
-    * macOS
-        * `xcode-select --install` 
-* Set `GRAALVM_HOME` to your GraalVM Home directory e.g. `/opt/graalvm` on Linux or `$location/JDK/GraalVM/Contents/Home` on macOS
+            * On Fedora `sudo dnf install zlib-devel`;
+            * Otherwise `sudo apt-get install libz-dev`;
+    * macOS:
+        * `xcode-select --install`; 
+* Set `GRAALVM_HOME` to your GraalVM Home directory e.g. `/opt/graalvm` on Linux or 
+  `/path/to/GraalVM/Contents/Home` on macOS;
 * Install Docker: it is used to run the integration tests for this project:
     * Check [the installation guide](https://docs.docker.com/install/), 
-      and [the MacOS installation guide](https://docs.docker.com/docker-for-mac/install/)
-    * If you just installed docker, be sure that your current user can run a container (no root required). 
-      On Linux, check [the post-installation guide](https://docs.docker.com/install/linux/linux-postinstall/)
+      and [the MacOS installation guide](https://docs.docker.com/docker-for-mac/install/);
+    * If you just installed docker, be sure that your current user can run a container (no root 
+      required). On Linux, check 
+      [the post-installation guide](https://docs.docker.com/install/linux/linux-postinstall/).
 
 ## Coding Guidelines
 
 ### Java
 
 We follow the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html). See
-https://github.com/google/google-java-format for IDE plugins. The rules are not configurable.
+[here](https://github.com/google/google-java-format) for IDE plugins. The rules are not 
+configurable.
 
 The build will fail if the code is not formatted. To format all files from the command line, run:
  
@@ -62,9 +66,9 @@ The formatter does not enforce a maximum line length, but please use less than 1
 to keep files readable across all mediums (IDE, terminal, Github...).
 
 ## Coding style -- production code
-
-Do not use static imports. They make things harder to understand when you look at the code 
-without IDE support, like Github's code view.
+ 
+Do not use static imports in production code. They make things harder to understand when you look 
+at the code without IDE support, like Github's code view.
 
 Avoid abbreviations in class and variable names. A good rule of thumb is that you should only use
 them if you would also do so verbally. For example, "id" and "config" are probably reasonable.
@@ -76,9 +80,9 @@ be around 200-300 lines.
 
 ### Javadoc
 
-All types in **API** packages must be documented. For **internal** packages, documentation is optional,
-but not discouraged: it's generally a good idea to have a class-level comment that explains
-where the component fits in the architecture, and anything else that you feel is important.
+All types in **API** packages must be documented. For **internal** packages, documentation is 
+optional, but not discouraged: it's generally a good idea to have a class-level comment that 
+explains where the component fits in the architecture, and anything else that you feel is important.
 
 ### Logs
 
@@ -88,22 +92,22 @@ We use SLF4J; loggers are declared like this:
 private static final Logger LOG = LoggerFactory.getLogger(TheEnclosingClass.class);
 ```
 
-For more information, please visit the [quarkus logging](https://quarkus.io/guides/logging) website.
-
-
+For more information, please consult the 
+[quarkus documentation on logging](https://quarkus.io/guides/logging).
 
 ### Nullability annotations
 
 We use the [Spotbugs annotations](https://spotbugs.github.io) to document nullability of parameters,
 method return types and class members.
 
-Please annotate any new class or interface with the appropriate annotations: `@NonNull`, `@Nullable`. Make sure you import 
-the types from `edu.umd.cs.findbugs.annotations`, there are homonyms in the classpath.
-
+Please annotate any new class or interface with the appropriate annotations: `@NonNull`, 
+`@Nullable`. Make sure you import the types from `edu.umd.cs.findbugs.annotations`, there are 
+homonyms in the classpath.
 
 ## Coding style -- test code
 
 Static imports are permitted in a couple of places:
+
 * All AssertJ methods, e.g.:
   ```java
   assertThat(node.getDatacenter()).isNotNull();
@@ -142,33 +146,43 @@ Run the following command to execute both unit tests and regular integration tes
 
     mvn clean verify
 
-To also run integration tests that require a native image to be built, you need to activate the `native` profile:
+To also run integration tests that require a native image to be built, you need to activate the 
+`native` profile:
 
     mvn clean verify -Pnative
     
-When native integration tests are activated, the build takes considerably longer to finish.    
+Native tests require that you point the environment variable `GRAALVM_HOME` to a valid Graal 
+installation root. When native integration tests are activated, the build takes considerably longer 
+to finish.  
+
+See the [integration-tests](./integration-tests) module for more information.  
     
 ### Generating documentation
-   
-    mvn clean package -Prelease    
-    
-    
 
+Run the following command to generate the documentation in PDF and HTML:
+   
+    mvn clean package -Prelease
+
+See the [documentation](./documentation) module for more information.
+    
 ## Continuous Integration (CI)
 
-All branches and pull-requests in this project are built regularly on DataStax internal continuous integration servers. 
-These builds are not publicly available at this moment.
+All branches and pull-requests in this project are built regularly on DataStax internal continuous 
+integration servers. These builds are not publicly available at this moment.
 
-The `master` branch of this project is also regularly built against Quarkus `master` branch, by Quarkus own CI system. 
-The builds can be consulted [here](https://github.com/datastax/cassandra-quarkus/actions?query=workflow%3A%22Quarkus+ecosystem+CI%22).
+The `master` branch of this project is also regularly built against Quarkus `master` branch, by 
+Quarkus own CI system. The builds can be consulted 
+[here](https://github.com/datastax/cassandra-quarkus/actions?query=workflow%3A%22Quarkus+ecosystem+CI%22).
 
 ## Deployment & Release
 
 DataStax does not publish snapshot builds of this project at the moment.
 
-Releases are managed and conducted by DataStax. S
-table (release) artifacts are available [from Maven Central](https://repo1.maven.org/maven2/com/datastax/oss/quarkus/cassandra-quarkus-parent). 
-See "Getting the extension" in the project's main [README file](https://github.com/datastax/cassandra-quarkus/#getting-the-extension) for more details.
+Releases are managed and conducted by DataStax. Stable (release) artifacts are available 
+[from Maven Central](https://repo1.maven.org/maven2/com/datastax/oss/quarkus/cassandra-quarkus-parent). 
+See "Getting the extension" in the project's main 
+[README file](https://github.com/datastax/cassandra-quarkus/#getting-the-extension) for more 
+details.
 
 ## License headers
 
@@ -178,6 +192,7 @@ run:
 ```
 mvn license:format
 ```
+
 ## Commits
 
 Keep your changes **focused**. Each commit should have a single, clear purpose expressed in its 
@@ -235,7 +250,8 @@ Like commits, pull requests should be focused on a single, clearly stated goal.
 Don't base a pull request onto another one, it's too complicated to follow two branches that evolve
 at the same time. If a ticket depends on another, wait for the first one to be merged. 
 
-If your pull request references an issue, make sure to reference it in its title or in its description.
+If your pull request references an issue, make sure to reference it in its title or in its 
+description.
 
 If you have to address feedback, avoid rewriting the history (e.g. squashing or amending commits):
 this makes the reviewers' job harder, because they have to re-read the full diff and figure out
@@ -256,5 +272,5 @@ If you need new stuff from the base branch, it's fine to rebase and force-push, 
 rewrite the history. Just give a heads up to the reviewers beforehand. Don't push a merge commit to
 a pull request.
 
-Be sure to test your pull request by running all the unit and integration tests, including tests in native mode. 
-Again, this can be done by running `mvn clean verify -Pnative`.
+Be sure to test your pull request by running all the unit and integration tests, including tests in 
+native mode. Again, this can be done by running `mvn clean verify -Pnative`.

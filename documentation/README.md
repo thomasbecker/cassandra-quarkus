@@ -1,19 +1,24 @@
-# Generating Documentation
+# Cassandra Quarkus - Documentation
+
+This module hosts the official documentation for the Cassandra Quarkus 
+extension.
+
+## Asciidoc sources
+
+The documentation is written in Asciidoc and is located 
+[here](src/main/asciidoc/cassandraclient.adoc).
+
+## Generating Documentation
 
 To generate the documentation run:
 
     mvn clean package -Prelease
 
-## HTML docs
-
 To see the documentation in HTML format:
 
     open target/generated-docs/html/cassandraclient.html
-
-## PDF docs
 
 To see the documentation in PDF format:
 
     open target/generated-docs/pdf/cassandraclient.pdf
  
-

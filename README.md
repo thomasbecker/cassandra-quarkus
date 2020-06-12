@@ -2,12 +2,12 @@
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.datastax.oss.quarkus/cassandra-quarkus-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.datastax.oss.quarkus/cassandra-quarkus-client/)
 
-*You can find the documentation for latest version through [Docs] or via the release tags, e.g. 
-[1.0.0-alpha1](https://github.com/datastax/cassandra-quarkus/tree/1.0.0-alpha1).*
-
 An Apache Cassandra(R) extension for Quarkus.
 
-[Docs]: https://github.com/datastax/cassandra-quarkus/blob/master/documentation/src/main/asciidoc/cassandraclient.adoc
+*You can find the latest version of the official documentation 
+[here](https://github.com/datastax/cassandra-quarkus/blob/master/documentation/src/main/asciidoc/cassandraclient.adoc). 
+Documentation for specific versions can be consulted via their respective release tags, e.g. 
+[1.0.0-alpha1](https://github.com/datastax/cassandra-quarkus/blob/1.0.0-alpha1/documentation/src/main/asciidoc/cassandraclient.adoc).*
 
 ## Getting the extension
 
@@ -31,9 +31,9 @@ It requires Java 8 or higher.
 
 ## Useful links
 
-* [quickstart guide]
+* [Quickstart guide]
 * Bug tracking: [Issues]
-* [Mailing list]
+* Quarkus [Mailing list]
 * [Changelog]
 
 [quickstart guide]: https://github.com/datastax/cassandra-quarkus/blob/master/documentation/src/main/asciidoc/cassandraclient.adoc 
@@ -65,17 +65,3 @@ and/or other countries.
 Apache Cassandra, Apache, Tomcat, Lucene, Solr, Hadoop, Spark, TinkerPop, and Cassandra are 
 trademarks of the [Apache Software Foundation](http://www.apache.org/) or its subsidiaries in
 Canada, the United States and/or other countries. 
-
-
-## Running integration tests
-
-To run the non-native integration tests simply execute:
-
-    mvn clean verify
-    
-To run the native integration tests as well, execute:
-
-    mvn clean verify -Dnative
-    
-You need to point the environment variable `GRAALVM_HOME` to a valid Graal 
-installation root.

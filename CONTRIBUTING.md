@@ -220,6 +220,14 @@ information to reviewers, and might be a sign that your commit contains unrelate
  
 We don't enforce a particular subject line length limit, but try to keep it short.
 
+If your commit fixes an open issue, make sure to reference it in the commit message:
+    
+    Add test for CQL request handler (fixes #22)
+
+See GitHub's documentation on
+[issue references](https://help.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords#about-issue-references)
+for more information.
+
 You can add more details after the subject line, separated by a blank line. The following pattern
 (inspired by [Netty](http://netty.io/wiki/writing-a-commit-message.html)) is not mandatory, but
 welcome for complex changes:
@@ -251,7 +259,9 @@ Don't base a pull request onto another one, it's too complicated to follow two b
 at the same time. If a ticket depends on another, wait for the first one to be merged. 
 
 If your pull request references an issue, make sure to reference it in its title or in its 
-description.
+description. See GitHub's documentation on
+[issue references](https://help.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords#about-issue-references)
+for more information.
 
 If you have to address feedback, avoid rewriting the history (e.g. squashing or amending commits):
 this makes the reviewers' job harder, because they have to re-read the full diff and figure out

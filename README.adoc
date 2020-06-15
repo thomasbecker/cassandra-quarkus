@@ -1,6 +1,6 @@
 = Datastax Apache Cassandra® Quarkus extension
 
-image:: https://maven-badges.herokuapp.com/maven-central/com.datastax.oss.quarkus/cassandra-quarkus-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.datastax.oss.quarkus/cassandra-quarkus-client/
+image:: https://maven-badges.herokuapp.com/maven-central/com.datastax.oss.quarkus/cassandra-quarkus-client/badge.svg
 
 An Apache Cassandra(R) extension for Quarkus.
 

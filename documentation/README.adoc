@@ -1,14 +1,14 @@
-# Cassandra Quarkus - Documentation
+= Cassandra Quarkus - Documentation
 
 This module hosts the official documentation for the Cassandra Quarkus 
 extension.
 
-## Asciidoc sources
+== Asciidoc sources
 
 The documentation is written in Asciidoc and is located 
 [here](src/main/asciidoc/cassandraclient.adoc).
 
-## Generating Documentation
+== Generating Documentation
 
 To generate the documentation run:
 

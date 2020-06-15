@@ -19,8 +19,7 @@ The `QuarkusCqlSession` instance is produced as a `Singleton` and can be safely
 shared between all components of your application. Indeed it is usually 
 considered an anti-pattern to create more than one session instance per 
 application; to understand how to create and use a session object correctly, 
-refer to the 
-[Java driver documentation](https://docs.datastax.com/en/developer/java-driver/latest/manual/core/#cql-session).
+refer to the link:https://docs.datastax.com/en/developer/java-driver/latest/manual/core/#cql-session[Java driver documentation].
 
 == Runtime Configuration
 

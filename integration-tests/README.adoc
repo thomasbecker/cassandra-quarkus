@@ -1,8 +1,8 @@
-# Cassandra Quarkus - Integration tests
+= Cassandra Quarkus - Integration tests
 
 This module hosts integration tests for the Cassandra Quarkus extension.
 
-## Running integration tests
+== Running integration tests
 
 To run the non-native integration tests simply execute:
 

@@ -54,7 +54,7 @@ ensemble:
         properties:
           graphite.create_server: true
   clients:
-    - name: cassandra-quarkus-app
+    - name: quickstartapp
       node.count: 1
       provisioner:
         name: ctool
@@ -103,7 +103,7 @@ workload:
     - clone-and-build-quickstart-app:
         module: bash
         properties:
-          target.group: cassandra-quarkus-app
+          target.group: quickstartapp
           export_output: false
           script: |
             cd ${FALLOUT_SCRATCH_DIR}
@@ -142,6 +142,14 @@ workload:
             #install maven and java
             sudo apt install maven --assume-yes
             sudo apt-get install unzip --assume-yes
+            git clone -b {{branch}} git@github.com:datastax/cassandra-quarkus.git
+            cd cassandra-quarkus/performance
+
+            QUICKSTART_APP_IP=${FALLOUT_QUICKSTARTAPP_NODE1_NODE_INFO_PUBLICNETWORKADDRESS}
+
+            # -duration : 60 second -c 256 concurent connections -t 40 threads
+            wrk -d 60 -c 256 -t 40 --latency -s script.lua http://${QUICKSTART_APP_IP}:8080/ &> "testResult_useQuarkusNettyEventLoop_{{useQuarkusNettyEventLoop}}$_(date +%s).txt"
+
 
 
 

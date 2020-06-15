@@ -128,3 +128,23 @@ workload:
             # compile and start quickstart app
             mvn clean package
             java -jar ./target/cassandra-quarkus-quickstart-1.0.0-SNAPSHOT-runner.jar &> ${FALLOUT_ARTIFACT_DIR}/quickstart.log
+    - start-client-script:
+        module: bash
+        properties:
+          target.group: http-client
+          export_output: false
+          script: |
+            cd ${FALLOUT_SCRATCH_DIR}
+            sudo apt update --assume-yes
+            sudo apt-get install lftp --assume-yes
+            sudo apt-get install wrk --assume-yes
+
+            #install maven and java
+            sudo apt install maven --assume-yes
+            sudo apt-get install unzip --assume-yes
+
+
+
+  checkers:
+    verify_success:
+      checker: nofail

@@ -21,18 +21,18 @@ If you have not done so on this machine, you need to:
 * Install Java SDK (OpenJDK recommended);
 * Install link:https://quarkus.io/guides/building-native-image[GraalVM];
 * Install platform C developer tools:
-    * Linux:
-        * Make sure header files are installed on your system.
-            * On Fedora `sudo dnf install zlib-devel`;
-            * Otherwise `sudo apt-get install libz-dev`;
-    * macOS:
-        * `xcode-select --install`; 
+    ** Linux:
+        *** Make sure header files are installed on your system.
+            **** On Fedora `sudo dnf install zlib-devel`;
+            **** Otherwise `sudo apt-get install libz-dev`;
+    ** macOS:
+        *** `xcode-select --install`;
 * Set `GRAALVM_HOME` to your GraalVM Home directory e.g. `/opt/graalvm` on Linux or 
   `/path/to/GraalVM/Contents/Home` on macOS;
 * Install Docker: it is used to run the integration tests for this project:
-    * Check link:https://docs.docker.com/install/[the installation guide],
+    ** Check link:https://docs.docker.com/install/[the installation guide],
       and link:https://docs.docker.com/docker-for-mac/install/[the MacOS installation guide];
-    * If you just installed docker, be sure that your current user can run a container (no root 
+    ** If you just installed docker, be sure that your current user can run a container (no root
       required). On Linux, check 
       link:https://docs.docker.com/install/linux/linux-postinstall/[the post-installation guide].
 
